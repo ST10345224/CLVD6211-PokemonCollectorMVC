@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PokemonCollectorMVC.Areas.Identity.Data;
+using PokemonCollectorMVC.Models;
 
 namespace PokemonCollectorMVC.Data;
 
@@ -21,6 +22,8 @@ public class PokemonCollectorMVCContext : IdentityDbContext<PokemonCollectorMVCU
         // Add your customizations after calling base.OnModelCreating(builder);
         builder.ApplyConfiguration(new ApplciationUserEntityConfiguration());
     }
+
+public DbSet<PokemonCollectorMVC.Models.TCG> TCG { get; set; } = default!;
 }
 
 public class ApplciationUserEntityConfiguration : IEntityTypeConfiguration<PokemonCollectorMVCUser>
