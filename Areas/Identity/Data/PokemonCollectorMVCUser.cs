@@ -9,8 +9,8 @@ namespace PokemonCollectorMVC.Areas.Identity.Data;
 // Add profile data for application users by adding properties to the PokemonCollectorMVCUser class
 public class PokemonCollectorMVCUser : IdentityUser
 {
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
 
 }
 
